@@ -1,22 +1,19 @@
 /* eslint-disable */
 
-console.log("Any string");
-var pronoun = ["we", "the", "their", "her"];
-var adj = ["grand", "best", "favorite", "exciting", "thrilling"];
-var noun = ["soap", "dog", "lawyer", "fruit", "shoes", "car"];
 
-window.onload = function() {
   //write your code here
-};
+  var pronoun = ["we", "the", "their", "her"];
+  var adj = ["great", "best", "favorite", "cool"];
+  var noun = ["soap", "dog", "fruit", "shoes", "car"];
 
-function generateDomain() {
-  for (var word in pronoun) {
-    for (var part in adj) {
-      for (var item in noun) {
-        console.log(word + part + item + ".com");
+  function generateDomain() {
+    for (var word of pronoun) {
+      for (var part of adj) {
+        for (var item of noun) {
+          console.log(word + part + item + ".com");
+        }
       }
     }
   }
-}
 
-generateDomain();
+  generateDomain();
