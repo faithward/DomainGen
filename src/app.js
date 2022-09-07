@@ -1,11 +1,22 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+console.log("Any string");
+var pronoun = ["we", "the", "their", "her"];
+var adj = ["grand", "best", "favorite", "exciting", "thrilling"];
+var noun = ["soap", "dog", "lawyer", "fruit", "shoes", "car"];
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
 };
+
+function generateDomain() {
+  for (var word in pronoun) {
+    for (var part in adj) {
+      for (var item in noun) {
+        console.log(word + part + item + ".com");
+      }
+    }
+  }
+}
+
+generateDomain();
